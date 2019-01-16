@@ -1,16 +1,24 @@
 {
-  "name": "littledb",
+  "name": "badbank",
   "version": "1.0.0",
-  "description": "lowdb sample for 1.125",
+  "description": "MIT Digital Transformation - Bad Bank Assignment",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "abel@mit.edu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkKensington/badbank.git"
+  },
+  "author": "Mark Kensington",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarkKensington/badbank/issues"
+  },
+  "homepage": "https://github.com/MarkKensington/badbank#readme",
   "dependencies": {
-    "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "lowdb": "^1.0.0"
   }
 }
