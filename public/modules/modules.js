@@ -13,8 +13,8 @@ ui.navigation = `
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#" onclick="loadCreateAccount()">Create Account</a>
-          <a class="nav-item nav-link" href="#" onclick="loadLogin()">Login</a>
+          <a class="nav-item active nav-link" href="#" onclick="loadCreateAccount()">Create Account</a>
+          <a class="nav-item active nav-link" href="#" onclick="loadLogin()">Login</a>
           <a class="nav-item nav-link" href="#" onclick="loadDeposit()">Deposit</a>
           <a class="nav-item nav-link" href="#" onclick="loadWithdraw()">Withdraw</a>
           <a class="nav-item nav-link" href="#" onclick="loadTransactions()">Transactions</a>
@@ -48,7 +48,8 @@ ui.createAccount = `
         <input type="email" class="form-control" id="email" placeholder="Enter email address"><br>
         Password:<br>
         <input type="password" class="form-control" id="password" placeholder="Enter password"><br>
-        <a href="#" class="btn btn-light" onclick="create(name, email, password)">Create Account</a>
+        <a href="#" class="btn btn-light" onclick="create()">Create Account</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -63,6 +64,7 @@ ui.login = `
         Password:<br>
         <input type="password" class="form-control" id="password" placeholder="Enter password"><br>
         <a href="#" class="btn btn-light" onclick="login(email, password)">Login</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -77,6 +79,7 @@ ui.deposit = `
         Amount:<br>
         <input type="number" class="form-control" id="amount" placeholder="Enter amount to deposit"><br>
         <a href="#" class="btn btn-light" onclick="deposit(email, amount)">Deposit</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -91,6 +94,7 @@ ui.withdraw = `
         Amount:<br>
         <input type="number" class="form-control" id="amount" placeholder="Enter amount to withdraw"><br>
         <a href="#" class="btn btn-light" onclick="withdraw(email, amount)">Withdraw</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -103,6 +107,7 @@ ui.transactions = `
         Email Address:<br>
         <input type="email" class="form-control" id="email" placeholder="Enter email address"><br>
         <a href="#" class="btn btn-light" onclick="transactions(email)">List Transactions</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -115,6 +120,7 @@ ui.balance = `
         Email Address:<br>
         <input type="email" class="form-control" id="email" placeholder="Enter email address"><br>
         <a href="#" class="btn btn-light" onclick="balance(email)">Show Balance</a>
+        <div id="results"></div>
       </div>
     </div>
 `;
@@ -122,11 +128,14 @@ ui.balance = `
 ui.allData = `
     <!-- ------------- All Data UI ------------- -->
     <a href="#" class="btn btn-primary" onclick="allData()">Show All Data</a>
+    <div id="results"></div>
 `;
+
 
 var target     = document.getElementById('target');
 var navigation = document.getElementById('navigation');
 navigation.innerHTML += ui.navigation;
+
 
 var defaultModule = function(){
     target.innerHTML = ui.default;
@@ -153,7 +162,7 @@ var loadTransactions = function(){
 };
 
 var loadBalance = function(){
-    target.innerHTML = ui.balance;
+    target.innerHTML  = ui.balance;
 };
 
 var loadAllData = function(){

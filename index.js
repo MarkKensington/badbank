@@ -89,23 +89,12 @@ app.get('/account/login/:email/:password', function (req, res) {
     if (getRecord){
         // second check to see if password is correct & if so return success message
         if (getRecord.password == req.params.password){
-            getRecord.transactions.push(createTrans("loginSuccess", 0));
-            db.get('accounts')
-              .find({ email: req.params.email })
-              .assign({ transactions: getRecord.transactions })
-              .write();
             console.log(getRecord);
             res.send(getRecord);
         }
         // if password fails then write a transaction but return null
         else{
-            console.log(getRecord);
-            getRecord.transactions.push(createTrans("loginFail", 0));
-            db.get('accounts')
-              .find({ email: req.params.email })
-              .assign({ transactions: getRecord.transactions })
-              .write();
-            console.log(getRecord);
+            console.log(`Invalid Password for Account [${ req.params.email }]!`);
             res.send(null);
         }
     }
@@ -167,11 +156,6 @@ app.get('/account/transactions/:email', function (req, res) {
     //first check to see if account exists & if so return transaction details
     var getRecord = findRecord(req.params.email);
     if (getRecord){
-        getRecord.transactions.push(createTrans("transactions", 0));
-        db.get('accounts')
-          .find({ email: req.params.email })
-          .assign({ transactions: getRecord.transactions })
-          .write();
         console.log(getRecord.transactions);
         res.send(getRecord.transactions);
     }
@@ -183,16 +167,10 @@ app.get('/account/transactions/:email', function (req, res) {
 });
 
 // Return account balance based on email
-  // app.get('/account/get/:email', function (req, res) { - changed app get route to get /account/balance  
-app.get('/account/balance/:email', function (req, res) {
+app.get('/account/get/:email', function (req, res) {
     //first check to see if account exists & if so return success message
     var getRecord = findRecord(req.params.email);
     if (getRecord){
-        getRecord.transactions.push(createTrans("get", 0));
-        db.get('accounts')
-          .find({ email: req.params.email })
-          .assign({ transactions: getRecord.transactions })
-          .write();
         console.log(`Account [${ req.params.email }] has a balance of [${ getRecord.balance }]`);
         res.send(`Account [${ req.params.email }] has a balance of [${ getRecord.balance }]`);
     }

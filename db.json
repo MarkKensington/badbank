@@ -1,158 +1,51 @@
 {
   "accounts": [
     {
-      "name": "Mark Kensington",
-      "email": "mk@123.com",
-      "balance": -700,
-      "password": "password",
+      "name": "peter",
+      "email": "peter@mit.edu",
+      "balance": 90,
+      "password": "one",
       "transactions": [
         {
           "action": "create",
           "amount": 0,
-          "timestamp": "2019-01-17T23:08:14.612Z"
-        },
-        {
-          "action": "loginFail",
-          "amount": 0,
-          "timestamp": "2019-01-17T23:09:08.006Z"
-        },
-        {
-          "action": "loginSuccess",
-          "amount": 0,
-          "timestamp": "2019-01-17T23:10:06.162Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-17T23:10:24.118Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-17T23:11:08.318Z"
+          "timestamp": "2019-01-23T17:40:32.290Z"
         },
         {
           "action": "deposit",
           "amount": 100,
-          "timestamp": "2019-01-17T23:11:45.318Z"
-        },
-        {
-          "action": "deposit",
-          "amount": 100,
-          "timestamp": "2019-01-17T23:11:48.022Z"
-        },
-        {
-          "action": "deposit",
-          "amount": 100,
-          "timestamp": "2019-01-17T23:11:48.755Z"
+          "timestamp": "2019-01-23T17:41:47.088Z"
         },
         {
           "action": "withdraw",
-          "amount": 1000,
-          "timestamp": "2019-01-17T23:12:21.116Z"
-        },
-        {
-          "action": "transactions",
-          "amount": 0,
-          "timestamp": "2019-01-17T23:13:05.640Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-18T15:52:18.705Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-18T15:52:54.508Z"
-        },
-        {
-          "action": "transactions",
-          "amount": 0,
-          "timestamp": "2019-01-18T15:53:07.195Z"
-        },
-        {
-          "action": "transactions",
-          "amount": 0,
-          "timestamp": "2019-01-18T16:14:49.992Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:47:27.615Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:50:07.559Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:51:13.612Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:55:10.477Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:58:19.236Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:58:42.579Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:59:40.876Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T17:59:52.663Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T18:00:32.846Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T18:02:11.426Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T18:08:08.341Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T18:09:44.737Z"
-        },
-        {
-          "action": "get",
-          "amount": 0,
-          "timestamp": "2019-01-19T18:12:05.514Z"
+          "amount": 10,
+          "timestamp": "2019-01-23T17:42:06.169Z"
         }
       ]
     },
     {
-      "name": "Peter Jones",
-      "email": "pj@123.com",
+      "name": "john",
+      "email": "john@mit.edu",
       "balance": 0,
-      "password": "mypass",
+      "password": "two",
       "transactions": [
         {
           "action": "create",
           "amount": 0,
-          "timestamp": "2019-01-17T23:08:33.528Z"
+          "timestamp": "2019-01-23T17:40:57.993Z"
+        }
+      ]
+    },
+    {
+      "name": "abel",
+      "email": "abel@mit.edu",
+      "balance": 0,
+      "password": "three",
+      "transactions": [
+        {
+          "action": "create",
+          "amount": 0,
+          "timestamp": "2019-01-23T17:41:10.789Z"
         }
       ]
     }
