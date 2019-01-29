@@ -1,0 +1,19 @@
+create accounts
+--------------------------
+curl www.mkbadbank.xyz/account/create/peter/peter@mit.edu/one
+curl www.mkbadbank.xyz/account/create/john/john@mit.edu/two
+curl www.mkbadbank.xyz/account/create/abel/abel@mit.edu/three
+
+get account
+--------------------------
+curl www.mkbadbank.xyz/account/get/peter@mit.edu
+
+Account transactions
+--------------------------
+curl www.mkbadbank.xyz/account/deposit/peter@mit.edu/100
+curl www.mkbadbank.xyz/account/withdraw/peter@mit.edu/10
+curl www.mkbadbank.xyz/account/transactions/peter@mit.edu
+
+All Account data
+--------------------------
+curl www.mkbadbank.xyz/account/all
