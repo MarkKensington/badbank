@@ -20,7 +20,6 @@ ui.navigationNotLoggedIn = `
           <a class="nav-item disabled nav-link" href="#" tabindex="-1" aria-disabled="true">Transactions</a>
           <a class="nav-item disabled nav-link" href="#" tabindex="-1" aria-disabled="true">Balance</a>
           <a class="nav-item disabled nav-link" href="#" tabindex="-1" aria-disabled="true">All Data</a>
-          <a class="nav-item disabled nav-link" href="#" tabindex="-1" aria-disabled="true">Reset DB</a>
         </div>
       </div>
     </nav>
@@ -44,7 +43,6 @@ ui.navigationLoggedIn = `
           <a class="nav-item active nav-link" href="#" onclick="loadTransactions()">Transactions</a>
           <a class="nav-item active nav-link" href="#" onclick="loadBalance()">Balance</a>
           <a class="nav-item active nav-link" href="#" onclick="loadAllData()">All Data</a>
-          <a class="nav-item active nav-link" href="#" onclick="loadResetDB()">Reset DB</a>
         </div>
       </div>
     </nav>
@@ -156,19 +154,6 @@ ui.allData = `
     <div id = "results"></div>
 `;
 
-ui.resetDB = `
-    <!-- ------------- Reset Database UI ------------- -->
-    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-      <div class="card-header">Reset Database</div>
-      <div class="card-body">
-        <h5 class="card-title">Are you sure you want to clear all records?</h5>
-        Enter "reset" to execute:
-        <input type="text" class="form-control" id="reset" placeholder="reset"><br>
-        <a href="#" class="btn btn-light" onclick="resetDB()">Reset DB</a>
-      </div>
-    </div>
-`;
-
 
 var target       = document.getElementById('target');
 var navigation   = document.getElementById('navigation');
@@ -205,10 +190,6 @@ var loadBalance = function(){
 
 var loadAllData = function(){
     target.innerHTML = ui.allData;
-};
-
-var loadResetDB = function(){
-  target.innerHTML = ui.resetDB;
 };
 
 defaultModule();

@@ -155,25 +155,3 @@ function allData() {
         console.log(err);
       });
 };
-
-function resetDB() {
-    // -------------------------------------
-    //  Reset database
-    // -------------------------------------
-    var reset   = document.getElementById('reset').value;
-    var url     = '/account/resetDB/' + reset;
-    var results = document.getElementById('results');
-    
-    if (reset == "reset"){
-        superagent
-          .get(url)
-          .then(res => {
-            console.log(res.text);
-          })
-          .catch(err => {
-            console.log(err);
-          });
-        navigation.innerHTML = ui.navigationNotLoggedIn;
-        defaultModule();
-    }
-};

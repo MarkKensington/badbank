@@ -198,10 +198,3 @@ app.get('/account/all', function (req, res) {
     console.log (getAllRecords);
     res.send (getAllRecords);
 });
-
-// Reset database and clear ALL records
-app.get('/account/resetDB/:reset', function (req, res) {
-    db.set('accounts', []).write();
-    console.log (`Database has been successfully reset!`);
-    res.send (`Database has been successfully reset!`);
-});
